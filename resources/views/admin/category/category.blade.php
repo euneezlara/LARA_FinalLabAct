@@ -15,7 +15,7 @@
                         <tr>
                             <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">ID</th>
                             <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Category</th>
-                            <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">User ID</th>
+                            <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Username</th>
                             <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Created At</th>
                         </tr>
                     </thead>
@@ -24,7 +24,7 @@
                             <tr>
                                 <td class="px-6 py-4 whitespace-no-wrap">{{ $category->id }}</td>
                                 <td class="px-6 py-4 whitespace-no-wrap">{{ $category->category_name }}</td>
-                                <td class="px-6 py-4 whitespace-no-wrap">{{ $category->user_id }}</td>
+                                <td class="px-6 py-4 whitespace-no-wrap">{{$category->user->name}}</td>
                                 <td class="px-6 py-4 whitespace-no-wrap">{{ $category->created_at->diffForHumans() }}</td>
                             </tr>
                         @endforeach 

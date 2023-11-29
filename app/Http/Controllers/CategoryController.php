@@ -24,13 +24,14 @@ class CategoryController extends Controller
 {
     $data = $request->validate([
         'category_name' => 'required|string',
+        'user_id' => Auth::user()->id
     ]);
 
     // Set the user_id to the authenticated user's ID
     $data['user_id'] = Auth::id();
 
     // Set the created_at timestamp
-    $data['created_at'] = now(); // You may need to format this date as needed
+    $data['created_at'] = now(); 
 
     Category::create($data);
 
